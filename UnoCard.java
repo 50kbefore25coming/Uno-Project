@@ -1,5 +1,3 @@
-package com.unogame;
-
 /**
  * UnoCard.java - PHẦN 1: Lớp UnoCard & Enum
  * Người phụ trách: [Tên bạn]
