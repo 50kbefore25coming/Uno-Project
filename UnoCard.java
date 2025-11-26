@@ -42,10 +42,10 @@ public class UnoCard {
     }
 
     // --- trường dữ liệu ---
-    private final Mau mau;
-    private final Loai loai;
-    private final int so; // chỉ hợp lệ khi loai == NUMBER, ngược lại = -1
-    private final int diem; // điểm số của lá bài
+    private Mau mau;
+    private Loai loai;
+    private int so; // chỉ hợp lệ khi loai == NUMBER, ngược lại = -1
+    private int diem; // điểm số của lá bài
 
     // --- constructor ---
     // dùng cho số
@@ -78,7 +78,8 @@ public class UnoCard {
     public Loai getLoai() { return loai; }
     public int getSo() { return so; }
     public int getDiem() { return diem; }
-
+    // setter
+    public void setMau(Mau mau) { this.mau = mau; }
     // tiện ích
     public boolean isWild() { return loai == Loai.WILD || loai == Loai.WILD_DRAW_FOUR; }
     public boolean isNumber() { return loai == Loai.NUMBER; }
