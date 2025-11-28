@@ -70,7 +70,7 @@ public class UnoLogic {
 
                 // Kiểm tra thắng
                 if (currentPlayer.getHand().isEmpty()) {
-                    System.out.println("\n🎉 CHÚC MỪNG! " + currentPlayer.getName() + " ĐÃ CHIẾN THẮNG!");
+                    System.out.println("\nCHÚC MỪNG! " + currentPlayer.getName() + " ĐÃ CHIẾN THẮNG!");
                     isGameOver = true;
                     return;
                 }
@@ -143,7 +143,7 @@ public class UnoLogic {
                 if (card.matches(topCard, currentMau)) {
                     return playCardInternal(p, choice);
                 } else {
-                    System.out.println("❌ Lá bài không hợp lệ! Phải cùng màu " + currentMau + " hoặc cùng số/loại.");
+                    System.out.println("Lá bài không hợp lệ! Phải cùng màu " + currentMau + " hoặc cùng số/loại.");
                 }
             } else {
                 System.out.println("Lựa chọn không tồn tại.");
@@ -197,7 +197,7 @@ public class UnoLogic {
     private UnoCard playCardInternal(Player p, int index) {
         UnoCard card = p.getHand().get(index);
         p.getHand().remove(index);
-        System.out.println("➡️ " + p.getName() + " đánh: " + card);
+        System.out.println("p.getName() + " đánh: " + card);
 
         // Nếu là Wild, phải chọn màu
         if (card.isWild()) {
@@ -217,11 +217,11 @@ public class UnoLogic {
     private void handleSpecialCardEffect(UnoCard card) {
         switch (card.getLoai()) {
             case SKIP:
-                System.out.println("🚫 Mất lượt!");
+                System.out.println("Mất lượt!");
                 moveToNextPlayer(); // Nhảy cóc 1 người
                 break;
             case REVERSE:
-                System.out.println("🔄 Đảo chiều!");
+                System.out.println("Đảo chiều!");
                 direction *= -1;
                 // Nếu chỉ có 2 người chơi, Reverse hoạt động như Skip
                 if (players.size() == 2) {
@@ -229,7 +229,7 @@ public class UnoLogic {
                 }
                 break;
             case DRAW_TWO:
-                System.out.println("💥 +2 Bài!");
+                System.out.println("+2 Bài!");
                 int victimIndex = getNextPlayerIndex();
                 Player victim = players.get(victimIndex);
                 victim.draw(deck.drawCard());
@@ -238,7 +238,7 @@ public class UnoLogic {
                 moveToNextPlayer(); // Nạn nhân mất lượt
                 break;
             case WILD_DRAW_FOUR:
-                System.out.println("🔥🔥 +4 Bài & Chọn màu!");
+                System.out.println("+4 Bài & Chọn màu!");
                 int victimIndex4 = getNextPlayerIndex();
                 Player victim4 = players.get(victimIndex4);
                 for(int i=0; i<4; i++) victim4.draw(deck.drawCard());
