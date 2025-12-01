@@ -1,0 +1,118 @@
+.root {
+    -fx-background-color: linear-gradient(to bottom right, #4facfe 0%, #00f2fe 100%);
+}
+
+/*  TIÊU ĐỀ  */
+.title-uno, .title-game {
+    -fx-font-family: "Coiny";
+    -fx-font-size: 90px;
+    -fx-font-weight: bold;
+    -fx-stroke: black;
+    -fx-stroke-width: 3px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,1), 0, 0, 8, 8);
+}
+
+.title-uno {
+    -fx-fill: #00c3ff;
+}
+
+.title-game {
+    -fx-fill: white;
+}
+
+/* MENU BUTTONS */
+.menu-btn {
+    -fx-background-color: rgba(0,0,0,0.1);
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 24px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10 20 10 20;
+    -fx-cursor: hand;
+    -fx-background-radius: 0;
+    -fx-border-width: 0 0 0 5;
+
+    -fx-transition: -fx-background-color 0.3s;
+}
+
+.btn-play {
+    -fx-border-color: transparent transparent transparent #00e676;
+}
+
+.btn-play:hover {
+    -fx-background-color: #00e676;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+.btn-settings {
+    -fx-border-color: transparent transparent transparent #ff9100;
+}
+
+.btn-settings:hover {
+    -fx-background-color: #ff9100;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+.btn-exit {
+    -fx-border-color: transparent transparent transparent #ff1744;
+}
+
+.btn-exit:hover {
+    -fx-background-color: #ff1744;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/*  SETTINGS PANEL  */
+.settings-panel {
+    -fx-background-color: rgba(255, 255, 255, 0.95); /* Tăng độ đậm lên 0.95 cho đẹp */
+    -fx-background-radius: 40;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 20, 0, 0, 10);
+    -fx-padding: 40;
+}
+
+.settings-title {
+    -fx-font-family: "Coiny";
+    -fx-font-size: 60px;
+    -fx-fill: #2c3e50;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 0, 3, 3, 3);
+}
+
+.settings-label {
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 20px;
+    -fx-text-fill: #555555;
+    -fx-font-weight: bold;
+}
+
+.custom-slider .track {
+    -fx-background-color: #bdc3c7;
+    -fx-background-radius: 20;
+    -fx-pref-height: 15px;
+}
+
+.custom-slider .thumb {
+    -fx-background-color: #00e676;
+    -fx-background-radius: 50;
+    -fx-pref-width: 30px;
+    -fx-pref-height: 30px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);
+    -fx-cursor: hand;
+}
+
+/* Back Button */
+.back-btn {
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: white;
+    -fx-font-family: "Coiny";
+    -fx-font-size: 20px;
+    -fx-background-radius: 50;
+    -fx-cursor: hand;
+}
+.back-btn:hover {
+    -fx-background-color: #34495e;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
