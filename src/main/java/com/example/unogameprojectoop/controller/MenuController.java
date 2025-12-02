@@ -24,17 +24,17 @@ public class MenuController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         double savedBrightness = GameConfig.getBrightness();
         double opacity = 1.0 - savedBrightness;
         if (menuOverlay != null) {
             menuOverlay.setOpacity(opacity);
         }
     }
-
     @FXML
-    protected void onStartGameClick() {
+    protected void onStartGameClick(ActionEvent event) throws IOException {
         System.out.println("Vào màn hình chơi game!");
-    }
+        switchScene(event, "Game.fxml");    }
 
     @FXML
     protected void onSettingsClick(ActionEvent event) throws IOException {
@@ -50,6 +50,7 @@ public class MenuController implements Initializable {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/unogameprojectoop/" + fxmlFile));
         Parent root = fxmlLoader.load();
+
         double width = stage.getScene().getWidth();
         double height = stage.getScene().getHeight();
 

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<StackPane stylesheets="@menu-style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.unogameprojectoop.controller.GameController">
+
+    <BorderPane>
+        <top>
+            <VBox alignment="CENTER" prefHeight="150.0" spacing="5.0">
+         
+             <Pane fx:id="gameOverlay" mouseTransparent="true" opacity="0.0" style="-fx-background-color: black;" />
+                <Rectangle arcHeight="20" arcWidth="20" fill="white" height="50" opacity="0.3" width="50" />
+                <Label style="-fx-text-fill: white; -fx-font-weight: bold;" text="BOT 2" />
+                <HBox fx:id="botTopHand" alignment="CENTER" spacing="5.0" />
+            </VBox>
+        </top>
+
+        <left>
+            <VBox alignment="CENTER" prefWidth="150.0" spacing="5.0">
+                <Rectangle arcHeight="20" arcWidth="20" fill="white" height="50" opacity="0.3" width="50" />
+                <Label style="-fx-text-fill: white; -fx-font-weight: bold;" text="BOT 1" />
+                <VBox fx:id="botLeftHand" alignment="CENTER" spacing="5.0" />
+            </VBox>
+        </left>
+
+        <right>
+            <VBox alignment="CENTER" prefWidth="150.0" spacing="5.0">
+                <Rectangle arcHeight="20" arcWidth="20" fill="white" height="50" opacity="0.3" width="50" />
+                <Label style="-fx-text-fill: white; -fx-font-weight: bold;" text="BOT 3" />
+                <VBox fx:id="botRightHand" alignment="CENTER" spacing="5.0" />
+            </VBox>
+        </right>
+
+        <center>
+            <HBox alignment="CENTER" spacing="50.0">
+                <Button fx:id="btnDraw" prefHeight="120.0" prefWidth="80.0" style="-fx-background-color: #2d3436; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="RÚT" />
+                <StackPane fx:id="discardPile" />
+                <Label fx:id="currentColorLabel" style="-fx-text-fill: white; -fx-font-size: 18px;" text="Màu: ..." />
+            </HBox>
+        </center>
+
+        <bottom>
+            <VBox alignment="CENTER" prefHeight="200.0" spacing="10.0">
+                <HBox alignment="CENTER" spacing="20.0">
+                    <Label fx:id="statusLabel" style="-fx-text-fill: yellow; -fx-font-size: 20px; -fx-font-weight: bold;" text="Lượt của bạn!" />
+                    <Button onAction="#onBackToMenu" style="-fx-font-size: 14px;" styleClass="back-btn" text="MENU" />
+                </HBox>
+                <HBox fx:id="playerHandBox" alignment="CENTER" spacing="-40.0" />
+            </VBox>
+        </bottom>
+    </BorderPane>
+</StackPane>
